@@ -1,0 +1,86 @@
+@use 'styles/vars/' as *;
+
+.layersListItem {
+	/* user-select: none; */
+	cursor: pointer;
+	user-select: none;
+
+	display: grid;
+	grid-template-columns: $module 1fr $module * 2;
+	column-gap: $module;
+	align-content: center;
+	align-items: center;
+
+	height: $module * 4;
+	margin: -1px 0 0;
+	padding: 0 $module;
+
+	border-top: 1px solid var(--grey-light);
+	border-right: 1px solid rgba($color: #000, $alpha: 0%);
+	border-bottom: 1px solid var(--grey-light);
+	border-left: 1px solid rgba($color: #000, $alpha: 0%);
+
+	&:hover {
+		background-color: var(--primary-overlay-superlight);
+	}
+
+	&.active {
+		margin: 0 0 1px;
+		background-color: var(--primary-overlay-light);
+		border-color: var(--primary);
+
+		&:hover {
+			background-color: var(--primary-overlay-light);
+		}
+	}
+  
+	&.hidden {
+		color: var(--grey-main);
+
+		svg{
+			stroke: var(--grey-main);
+		}
+	}
+  
+	&.blocked {
+		grid-template-columns: 8px 1fr 16px 16px;
+	}
+
+	.name {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		&__counter {
+			margin-left: 4px;
+
+			font-size: 10px;
+			color: var(--grey-main);
+			text-align: start;
+			vertical-align: top;
+
+			&.hidden {
+				display: none;
+			}
+		}
+	}
+
+	.emptyStatus {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nonEmptyBadge {
+		width: 4px;
+		height: 4px;
+		background-color: var(--primary);
+		border-radius: 4px;
+	}
+
+	.iconContainer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

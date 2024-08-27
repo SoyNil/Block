@@ -1,0 +1,10 @@
+.card {
+	color: var(--white);
+	background-color: var(--black);
+	border-radius: 2px;
+
+	&.white {
+		color: var(--black);
+		background-color: var(--white);
+	}
+}

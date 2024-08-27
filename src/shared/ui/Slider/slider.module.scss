@@ -1,0 +1,47 @@
+.slider {
+	width: 100%;
+	min-width: 96px;
+	height: 2px;
+
+	appearance: none;  /* Override default CSS styles */
+	appearance: none;
+	opacity: 0.8;
+	background: var(--white);
+	outline: none;
+
+	transition: .2s;
+	transition: opacity .2s;
+
+	&.dark {
+		background: var(--grey-dark);
+	}
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+	cursor: pointer;
+
+	width: 8px;
+	height: 8px;
+
+	appearance: none;
+	appearance: none;
+	background: var(--grey-main);
+	border-radius: 50%;
+}
+
+
+.slider::-moz-range-thumb {
+	cursor: pointer;
+
+	width: 8px;
+	height: 8px;
+  
+	background: var(--grey-main);
+	border-radius: 50%;
+}
+

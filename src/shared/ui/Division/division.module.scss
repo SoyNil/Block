@@ -1,0 +1,25 @@
+.division {
+	padding-top: 8px;
+}
+
+.header {
+	padding-left: 8px;
+	font-size: 10px;
+	color: var(--grey-dark);
+}
+
+//divider n the bottom
+.division:not(:last-child)::after{
+	content: '';
+
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	display: block;
+
+	width: 90%;
+	height: 1px;
+
+	background-color: var(--grey-darkest);
+}
